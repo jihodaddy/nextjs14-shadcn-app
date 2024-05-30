@@ -6,7 +6,7 @@ function PageHeader({
   className,
   children,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+}: Readonly<React.HTMLAttributes<HTMLDivElement>>) {
   return (
     <section
       className={cn(
@@ -23,9 +23,9 @@ function PageHeader({
 function PageHeaderHeading({
   className,
   ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) {
+}: Readonly<React.HTMLAttributes<HTMLHeadingElement>>) {
   return (
-    <h1
+    <div
       className={cn(
         "text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]",
         className
@@ -38,7 +38,7 @@ function PageHeaderHeading({
 function PageHeaderDescription({
   className,
   ...props
-}: React.HTMLAttributes<HTMLParagraphElement>) {
+}: Readonly<React.HTMLAttributes<HTMLParagraphElement>>) {
   return (
     <Balance
       className={cn(
@@ -53,7 +53,7 @@ function PageHeaderDescription({
 function PageActions({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+}: Readonly<React.HTMLAttributes<HTMLDivElement>>) {
   return (
     <div
       className={cn(

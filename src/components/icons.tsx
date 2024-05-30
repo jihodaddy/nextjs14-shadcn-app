@@ -1,3 +1,32 @@
+import {
+  AlertTriangle,
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  Copy,
+  CreditCard,
+  File,
+  FileText,
+  HelpCircle,
+  Image,
+  Laptop,
+  Loader2,
+  LucideIcon,
+  LucideProps,
+  Moon,
+  MoreVertical,
+  Plus,
+  Puzzle,
+  Search,
+  Settings,
+  SunMedium,
+  Trash,
+  User,
+  X,
+} from "lucide-react";
+
 type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
@@ -129,20 +158,43 @@ export const Icons = {
       />
     </svg>
   ),
-  spinner: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-    </svg>
-  ),
+  // spinner: (props: IconProps) => (
+  //   <svg
+  //     xmlns="http://www.w3.org/2000/svg"
+  //     width="24"
+  //     height="24"
+  //     viewBox="0 0 24 24"
+  //     fill="none"
+  //     stroke="currentColor"
+  //     strokeWidth="2"
+  //     strokeLinecap="round"
+  //     strokeLinejoin="round"
+  //     {...props}
+  //   >
+  //     <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+  //   </svg>
+  // ),
+  add: Plus,
+  arrowRight: ArrowRight,
+  arrowUpRight: ArrowUpRight,
+  billing: CreditCard,
+  chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
+  check: Check,
+  close: X,
+  copy: Copy,
+  ellipsis: MoreVertical,
+  help: HelpCircle,
+  laptop: Laptop,
+  media: Image,
+  moon: Moon,
+  page: File,
+  post: FileText,
+  search: Search,
+  settings: Settings,
+  spinner: Loader2,
+  sun: SunMedium,
+  trash: Trash,
+  user: User,
+  warning: AlertTriangle,
 }

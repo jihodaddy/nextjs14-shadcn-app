@@ -18,11 +18,11 @@ export function SiteHeader() {
             
             <div className="flex items-center gap-4 text-sm lg:gap-6">
               <Link
-                href={"/authentication"}
+                href={"/login"}
                 target="_blank"
                 rel="noreferrer"
               >
-                SignUp
+                SignIn
               </Link>
             </div>
             <Link
@@ -42,7 +42,7 @@ export function SiteHeader() {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <LoginModal />
+            {/* <LoginModal /> */}
             <DarkModeToggle />
           </nav>
         </div>

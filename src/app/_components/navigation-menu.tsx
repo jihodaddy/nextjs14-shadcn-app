@@ -108,30 +108,16 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>About</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Image src={"/dev.png"} alt="site logo" width={"200"} height={"250"}/>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/about" title="About">
-                About Me...
-              </ListItem>
-              <ListItem href="/blog" title="Blog">
-                Click to My Blog
-              </ListItem>
-              <ListItem href={siteConfig.links.github} title="GitHub">
-                Welcome to My GitHub
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
+          <Link href="/about" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              About
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+              Blog
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
