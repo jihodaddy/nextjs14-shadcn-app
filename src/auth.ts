@@ -8,16 +8,29 @@ const handler = NextAuth({
     maxAge: 30 * 24 * 60 * 60, // 30 days
   },
   callbacks: {
-    session: async (session, user) => {
-      session.token = user.token;
-      return session;
+    async signIn({ user, account, profile, email, credentials }) {
+      return true
     },
-    jwt: async (token, user) => {
-      if (user) {
-        token = user.token;
+    async session({ session, token }) {
+      if (session.user) {
+        if (token.sub) {
+          session.user.id = token.sub;
+        }
+  
+        if (token.email) {
+          session.user.email = token.email;
+        }
+
+        session.user.name = token.name;
+        session.user.image = token.picture;
       }
-      return token;
+
+      return session
     },
+    async jwt({ token, account }) { 
+      
+      return token;
+    }
   },
   ...authConfig
 })
